@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Curved Corner Popup Example",
+  "version": "1.0",
+  "description": "Shows a dialog with counter",
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_title": "Show Dialog"
+  }
+}
